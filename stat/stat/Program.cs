@@ -1,34 +1,36 @@
 ﻿
-using System.ComponentModel.Design;
+//program wskazuje ile jakich liczb jest w 2002
+using System.Diagnostics.Metrics;
 
-var name ="Alek";
-var gender = "Male";
-var age = 20;
+Console.WriteLine("Wybrana liczba 2002");
+int number = 2002;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToCharArray();
 
-if (gender =="Male")
+List<char> numbers = new List<char>();
+
+numbers.Add('0');
+numbers.Add('1');
+numbers.Add('2');
+numbers.Add('3');
+numbers.Add('4');
+numbers.Add('5');
+numbers.Add('6');
+numbers.Add('7');
+numbers.Add('8');
+numbers.Add('9');
+
+foreach (var letter in letters)
 {
-    if (age < 30)
-    {
-        Console.WriteLine("Mężczyzna poniżej 30 lat");  
-    } 
-    else if (age == 20 && name == "Alek")
-    {
-        Console.WriteLine("Alek, lat 20");
-    }
+ int cont = 0;
+ foreach (var sing in letters)
+ {
+ if (letter == sing)
+ {
+ cont++;
+ }
 }
-if (gender == "Male")
-{
-    if (age < 18)
-    {
-        Console.WriteLine("Niepełnoletni Mężczyzna");
-    }
-    else if (age >= 18)
-    {
-        Console.WriteLine("Pełnoletni Mężczyzna");
-    }
-}
-
-
-
+ Console.WriteLine(letter + "W wybranej liczbie jest " + cont);
+ }
     
-    
+
