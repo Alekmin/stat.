@@ -8,17 +8,19 @@ namespace stat_
 {
    
     
-        public class User
+        public class Employee
         {
             private List<int> score = new List<int>();
-            public User(string login, string password, string age)
+            public Employee(string name, string surname, string password, string age)
             {
-                this.Login = login;
+                this.Name = name;
+                this.Surname = surname;
                 this.Password = password;
                 this.Age = age;
             }
 
-            public string Login { get; private set; }
+            public string Name { get; private set; }
+            public string Surname { get; private set; }
             public string Password { get; private set; }
             public string Age { get; private set; }
 
